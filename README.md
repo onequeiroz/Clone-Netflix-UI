@@ -1,0 +1,1 @@
+Parei no 11min na parte 7 da aula

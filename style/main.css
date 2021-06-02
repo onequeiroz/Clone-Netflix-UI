@@ -1,0 +1,123 @@
+/* Explicações no arquivo comentarios.md */
+
+:root {
+  --vermelho: #E50914;
+  --preto: #141414;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* Elementos base */
+body {
+  background-color: var(--preto);
+  font-family: 'Arial', Times, serif;
+  color: white;
+}
+
+/* Header */
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Coloca espaço entre as tags filhas (h2 e nav), sem colocar espaço nas bordas */
+
+  margin-right: 20px; /* Mesmo espaço do início do container para que o último item do <nav> não fique colado na borda */
+}
+
+header .logo {
+  color: var(--vermelho);
+  font-family: 'Arial Black', Times, serif;
+  font-size: 40px;
+  margin-left: 5px; /* Espaço para desgrudar o ícone Netflix do canto da tela */
+}
+
+header nav a {
+  color: #aaa;
+  margin-right: 10px; /* Espaço adicionado entre as tags <a> */
+}
+
+/* Evento hover
+  Ativado quando o usuário passa o mouse sobre um elemento
+*/
+header nav a:hover {
+  color: white;
+}
+
+/* Configs em todas as div class="container", facilitando certa padronização no projeto */
+.container {
+  margin-left: 20px;
+}
+
+/* Filme Principal */
+.filme-principal {
+  font-size: 16px;
+  height: 400px;
+
+  background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50) 100%), url(/img/capa-house.jpg); /* O linear-gradient é aplicado à imagem */
+  background-size: cover; /* Redimensiona a imagem de fundo para que preencha o espaço da caixa */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* Os elementos devem começar da esquerda para a direita */
+}
+
+.filme-principal .container {
+  width: 40%;
+}
+
+.filme-principal .descricao {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.filme-principal .titulo {
+  margin-top: 15%;
+  font-size: 40px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.botao {
+  background-color: rgba(0,0,0,.50);
+  border: none; /* Retira o contorno padrão que os botões possuem */
+  border-radius: 4px;
+  color: white;
+
+  padding: 15px 30px; /* Espaço nas 4 direções entre o elemento e a caixa do botão */
+  margin-right: 15px; /* Espaço entre os botões */
+  font-size: 12px;
+
+  cursor: pointer; /* Muda o cursor do mouse ao passar o mouse pelo elemento - também poderia ser definido no .botao:hover */
+
+  transition: .3s ease all;
+}
+
+/* Inverter a cor dos botões ao passar o mouse */
+.botao:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Espaço entre os ícones e o texto dos botões */
+.botao i {
+  margin-right: 7px;
+}
+
+.box-filme {
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
+.carrossel-filmes {
+  margin-top: 40px; /* Espaço entre a div da lista de filmes da div do filme principal */
+}
+
+.carrossel-title {
+  margin-bottom: 15px;
+}

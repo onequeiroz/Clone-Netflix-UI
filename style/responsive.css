@@ -1,0 +1,18 @@
+/* Media queries */
+@media screen and (max-width: 700px) {
+  header .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .botao {
+    margin-top: 5px; /* Espaço entre os botões para eles não ficarem grudados */
+    width: 250px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .descricao {
+    width: 65%;
+  }
+}
